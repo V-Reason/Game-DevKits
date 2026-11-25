@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>GameDevKit.BallisticsAim</RootNamespace>
+    <AssemblyName>GameDevKit.BallisticsAim</AssemblyName>
+  </PropertyGroup>
+</Project>
