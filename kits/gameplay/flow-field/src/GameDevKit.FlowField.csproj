@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>GameDevKit.FlowField</RootNamespace>
+    <AssemblyName>GameDevKit.FlowField</AssemblyName>
+  </PropertyGroup>
+</Project>
