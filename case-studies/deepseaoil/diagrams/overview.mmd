@@ -1,0 +1,28 @@
+flowchart LR
+    A["M01 工程底座"] --> B["M02 数据与配置"]
+    A --> C["M03 运行时骨架"]
+    C --> D["M04 战斗总装"]
+    B --> D
+    D --> E["M05 网格与地块"]
+    D --> F["M06 玩家"]
+    E --> G["M07 元素与连锁"]
+    E --> H["M08 敌人与寻路"]
+    D --> I["M09 关卡与流程"]
+    G --> J["M10 特效与反馈"]
+    E --> K["M11 光照"]
+    D --> L["M12 界面与 HUD"]
+    I --> M["M13 剧情与对话"]
+    J --> N["M14 音频"]
+    D --> O["M15 存档与诊断"]
+
+    G -.-> K1["Reaction Rules"]
+    G -.-> K2["Grid Propagation"]
+    H -.-> K3["Flow Field"]
+    E -.-> K4["State Machine"]
+    F -.-> K4
+    C -.-> K5["Composition Root"]
+    D -.-> K6["Event Bus"]
+    O -.-> K7["Snapshot Save"]
+    A -.-> K8["Object Pool"]
+    F -.-> K9["Input Buffer"]
+    D -.-> K10["Timer Wheel"]
