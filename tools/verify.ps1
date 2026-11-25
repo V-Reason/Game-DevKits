@@ -28,7 +28,17 @@ $kitNames = @(
     'engineering/event-bus',
     'engineering/object-pool',
     'engineering/timer-wheel',
-    'engineering/snapshot-save'
+    'engineering/snapshot-save',
+    'engineering/asset-lifecycle',
+    'engineering/effect-orchestrator',
+    'engineering/audio-arbitration',
+    'engineering/ui-stack',
+    'engineering/config-validation',
+    'engineering/diagnostics-snapshot',
+    'gameplay/actor-motion',
+    'gameplay/steering-path-following',
+    'gameplay/wave-sequencer',
+    'gameplay/ballistics-aim'
 )
 
 $moduleNames = @(
@@ -47,6 +57,19 @@ $moduleNames = @(
     'M13-story.md',
     'M14-audio.md',
     'M15-save.md'
+)
+
+$submoduleNames = @(
+    'asset-lifecycle.md',
+    'effect-orchestration.md',
+    'audio-arbitration.md',
+    'ui-stack.md',
+    'config-validation.md',
+    'diagnostics-snapshot.md',
+    'actor-motion.md',
+    'steering-following.md',
+    'wave-sequencer.md',
+    'ballistics-aim.md'
 )
 
 foreach ($relativePath in $requiredFiles) {
@@ -76,6 +99,14 @@ foreach ($module in $moduleNames) {
 
     if (-not (Test-Path -LiteralPath $path)) {
         throw "Missing deepseaoil module card: $module"
+    }
+}
+
+foreach ($submodule in $submoduleNames) {
+    $path = Join-Path $root "case-studies/deepseaoil/submodules/$submodule"
+
+    if (-not (Test-Path -LiteralPath $path)) {
+        throw "Missing deepseaoil submodule card: $submodule"
     }
 }
 

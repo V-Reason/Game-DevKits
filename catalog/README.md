@@ -14,6 +14,16 @@
 | 高频创建销毁产生 GC 或引擎开销 | [Object Pool](../kits/engineering/object-pool/README.md) |
 | 大量短计时器不能每帧遍历 | [Timer Wheel](../kits/engineering/timer-wheel/README.md) |
 | 存档覆盖到一半可能导致旧档也损坏 | [Snapshot Save](../kits/engineering/snapshot-save/README.md) |
+| 同一资源被多个系统重复请求 | [Asset Lifecycle](../kits/engineering/asset-lifecycle/README.md) |
+| 不同表现需要不同播放策略 | [Effect Orchestrator](../kits/engineering/effect-orchestrator/README.md) |
+| 高频音效占满 voice 或互相叠响 | [Audio Arbitration](../kits/engineering/audio-arbitration/README.md) |
+| 面板异步加载、重复打开和返回栈混乱 | [UI Stack](../kits/engineering/ui-stack/README.md) |
+| 配置缺表、重复主键、引用断裂 | [Config Validation](../kits/engineering/config-validation/README.md) |
+| 调试指标分散且耦合正式代码 | [Diagnostics Snapshot](../kits/engineering/diagnostics-snapshot/README.md) |
+| 多个系统同帧抢写角色速度 | [Actor Motion](../kits/gameplay/actor-motion/README.md) |
+| 敌人沿流场走仍抖动、顶墙或切角 | [Steering & Path Following](../kits/gameplay/steering-path-following/README.md) |
+| 波次倒计时、清场和出生节奏不一致 | [Wave Sequencer](../kits/gameplay/wave-sequencer/README.md) |
+| 投掷落点与视觉弧线不一致或瞄准翻转 | [Ballistics & Aim](../kits/gameplay/ballistics-aim/README.md) |
 
 ## 按模式找
 
@@ -30,6 +40,14 @@
 | BFS / Flood Fill | 算法 | Grid Propagation |
 | BFS / Dijkstra | 算法 | Flow Field |
 | 时间轮 | 数据结构/算法 | Timer Wheel |
+| Strategy | GoF 行为型 | Effect Orchestrator、Audio Arbitration |
+| Adapter | GoF 结构型 | Config Validation |
+| Facade | GoF 结构型 | Asset Lifecycle、Diagnostics Snapshot |
+| State | GoF 行为型 | Wave Sequencer |
+| LRU / 引用租约 | 工程惯用法 | Asset Lifecycle |
+| 分层面板栈 | 架构惯用法 | UI Stack |
+| 前视与转向闸门 | 游戏算法/控制律 | Steering & Path Following |
+| 抛物线 / 椭圆轨迹 | 数学算法 | Ballistics & Aim |
 
 ## 按 deepseaoil 模块找
 
@@ -50,3 +68,18 @@
 | [M13 剧情与对话](../case-studies/deepseaoil/modules/M13-story.md) | State Machine、Snapshot Save |
 | [M14 音频](../case-studies/deepseaoil/modules/M14-audio.md) | Object Pool、Timer Wheel |
 | [M15 存档与诊断](../case-studies/deepseaoil/modules/M15-save.md) | Snapshot Save |
+
+## v0.2 二级深挖
+
+| 父模块 | 深挖页 | 新 Kit |
+| --- | --- | --- |
+| M02 | [资产生命周期](../case-studies/deepseaoil/submodules/asset-lifecycle.md) | Asset Lifecycle |
+| M02 | [配置校验](../case-studies/deepseaoil/submodules/config-validation.md) | Config Validation |
+| M06 | [运动账本与门禁](../case-studies/deepseaoil/submodules/actor-motion.md) | Actor Motion |
+| M06 | [投掷与瞄准](../case-studies/deepseaoil/submodules/ballistics-aim.md) | Ballistics & Aim |
+| M08 | [路径跟随与转向](../case-studies/deepseaoil/submodules/steering-following.md) | Steering & Path Following |
+| M09 | [波次调度](../case-studies/deepseaoil/submodules/wave-sequencer.md) | Wave Sequencer |
+| M10 | [特效编排](../case-studies/deepseaoil/submodules/effect-orchestration.md) | Effect Orchestrator |
+| M12 | [UI 栈](../case-studies/deepseaoil/submodules/ui-stack.md) | UI Stack |
+| M14 | [音频仲裁](../case-studies/deepseaoil/submodules/audio-arbitration.md) | Audio Arbitration |
+| M15 | [指标与诊断](../case-studies/deepseaoil/submodules/diagnostics-snapshot.md) | Diagnostics Snapshot |

@@ -8,7 +8,7 @@ Game-DevKits 是面向游戏开发团队的知识百宝箱：把真实项目里�
 
 | 项目 | 说明 |
 | --- | --- |
-| 状态 | v0.1 初始知识库 |
+| 状态 | v0.2 工程系统与运动战斗扩展 |
 | 主要读者 | 未来的项目作者、协作开发者、技术复盘者 |
 | 核心语言 | C# 9 / `.NET Standard 2.1` |
 | 测试环境 | `.NET 8` + xUnit |
@@ -18,7 +18,7 @@ Game-DevKits 是面向游戏开发团队的知识百宝箱：把真实项目里�
 
 ## 当前内容
 
-首版包含 10 个独立 Kit：
+v0.1 包含 10 个基础 Kit；v0.2 新增 10 个工程与玩法 Kit，总计 20 个：
 
 | 问题域 | Kit | 核心模式/算法 |
 | --- | --- | --- |
@@ -32,6 +32,16 @@ Game-DevKits 是面向游戏开发团队的知识百宝箱：把真实项目里�
 | 工程 | [Object Pool](kits/engineering/object-pool/README.md) | 对象池、溢出策略 |
 | 工程 | [Timer Wheel](kits/engineering/timer-wheel/README.md) | 时间轮、句柄取消、双时间轴 |
 | 工程 | [Snapshot Save](kits/engineering/snapshot-save/README.md) | Memento 思想、版本化、原子写入 |
+| 工程 | [Asset Lifecycle](kits/engineering/asset-lifecycle/README.md) | Facade、并发加载、引用租约、LRU |
+| 工程 | [Effect Orchestrator](kits/engineering/effect-orchestrator/README.md) | Strategy、待播队列、代次句柄 |
+| 工程 | [Audio Arbitration](kits/engineering/audio-arbitration/README.md) | 准入策略、voice 上限、淡化与节流 |
+| 工程 | [UI Stack](kits/engineering/ui-stack/README.md) | 分层栈、异步生命周期、返回语义 |
+| 工程 | [Config Validation](kits/engineering/config-validation/README.md) | 清单、聚合校验、Spec Adapter |
+| 工程 | [Diagnostics Snapshot](kits/engineering/diagnostics-snapshot/README.md) | Pull 模型、指标快照、异常隔离 |
+| 玩法 | [Actor Motion](kits/gameplay/actor-motion/README.md) | 帧速度账本、移动门禁、状态优先级 |
+| 玩法 | [Steering & Path Following](kits/gameplay/steering-path-following/README.md) | 前视、拐点、换步、转向闸门 |
+| 玩法 | [Wave Sequencer](kits/gameplay/wave-sequencer/README.md) | 波次 State、出生节奏、快照 |
+| 玩法 | [Ballistics & Aim](kits/gameplay/ballistics-aim/README.md) | 抛物线、八向吸附、伪 3D 瞄准 |
 
 全部 15 个 deepseaoil 模块都可从 [案例研究](case-studies/deepseaoil/README.md) 进入。
 

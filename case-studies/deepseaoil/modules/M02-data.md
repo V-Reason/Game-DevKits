@@ -25,3 +25,8 @@ Luban、Excel 下拉框、镜像发布目录和具体 13 张表属于原工具�
 ## 源码
 
 `Assets/Scripts/Data/Config/ConfigModule.cs`、`Spec/*.cs`、`ConfigWorkspace/`。
+
+## 二级拆解
+
+- [资产与缓存生命周期](../submodules/asset-lifecycle.md)
+- [配置校验与 Spec](../submodules/config-validation.md)

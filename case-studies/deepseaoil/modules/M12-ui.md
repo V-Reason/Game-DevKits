@@ -25,3 +25,7 @@ HUD 若自己保存生命、弹药、波次等事实，就会成为第二份游�
 ## 源码
 
 `Presentation/UI/UIMgr.cs`、`BasePanel.cs`、`Panel/*.cs`。
+
+## 二级拆解
+
+- [UI 栈与生命周期](../submodules/ui-stack.md)

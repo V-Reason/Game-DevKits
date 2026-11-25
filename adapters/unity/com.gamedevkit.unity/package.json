@@ -1,6 +1,6 @@
 {
   "name": "com.gamedevkit.unity",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "displayName": "Game DevKit Unity Adapters",
   "description": "Minimal engine-neutral bridge helpers for Game-DevKits: runtime ticks, Unity clocks, and vector conversion.",
   "unity": "2022.3",

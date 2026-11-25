@@ -25,3 +25,7 @@ EffectModule 接收效果 ID 和上下文，按 Catalog 找到 IEffectDriver；�
 ## 源码
 
 `Presentation/Effects/EffectModule.cs`、`IEffectDriver.cs`、`Drivers/EffectDriverFactory.cs`。
+
+## 二级拆解
+
+- [特效编排](../submodules/effect-orchestration.md)

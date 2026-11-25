@@ -25,6 +25,22 @@
 | 临时文件后 Replace/Move | 原子发布惯用法 | verified | `SaveService.TryReplaceFile()` | 不能替代跨进程事务 |
 | UI 吸收数据/视图分离 | MVC/MVVM 思想 | concept-only | Panels、EventBus 订阅 | 项目不是严格 MVC 框架 |
 | 核心热路径降低分配 | 性能目标 | verified | EventBus 测试、容器复用、NonAlloc 物理查询 | 不是全工程、所有时段绝对 0 GC |
+| 资源入口统一缓存、加载和引用计数 | Facade + 生命周期惯用法 | verified | `Data/Asset/AssetModule.cs`、`CacheStore.cs`、`RefCounter.cs` | 异步租约不强行称为严格 Proxy |
+| 空闲资源冷却后按 LRU 淘汰 | 工程惯用法 | verified | `LifecycleMgr.cs` | Pin 与活跃引用必须排除在淘汰候选外 |
+| EffectDriver 可替换播放方式 | GoF Strategy | verified | `Presentation/Effects/IEffectDriver.cs` | 工厂负责创建，不是 Router 的职责 |
+| EffectDriverFactory 按种类创建 | Simple Factory | verified | `Drivers/EffectDriverFactory.cs` | 不是 Factory Method |
+| EffectHandle 带驱动与代次 | 生命周期惯用法 | verified | `EffectHandle.cs` | 旧句柄不能误停新实例 |
+| 音频 voice 上限与同素材去重 | 仲裁/工程惯用法 | verified | `AudioManager.PlaySfxInternal()` | 原项目 voice 满时拒绝，不自动抢占 |
+| UI 面板分层栈与关闭最上层 | Facade + 分层栈 | verified | `Presentation/UI/UIMgr.cs` | 不宣称严格 MVC |
+| 配置表清单与启动抽样校验 | Facade + 校验管线 | verified | `ConfigModule.cs`、`StartupValidator.cs`、`TablesMeta.cs` | 生成表属性与手写清单必须一致 |
+| DataMetrics 使用拉模型 | Snapshot 惯用法 | verified | `Data/Metrics/DataMetrics.cs` | 不走 EventBus，不持资源引用 |
+| 角色速度帧末单次提交 | 游戏循环惯用法 | verified | `Logic/Movement/ActorLedger.cs` | 反向分支原实现仍存在加速度未限幅问题 |
+| 受击/麻痹/减速形成门禁优先级 | 控制流惯用法 | verified | `Logic/Actor/Status/StatusGroup.cs` | 是优先级裁决，不称为责任链 |
+| 流场跟随使用前视、拐点与换步 | 控制算法 | verified | `EnemyPathFollower.cs`、`EnemyNavigator.cs` | 与流场缓存、体半径和可站立探针共同生效 |
+| 转向闸门限制单帧翻面 | 控制算法 | verified | `EnemySteeringGate.cs` | 只负责形状，不决定目标方向 |
+| 波次 Prep/Battle/Settle | GoF State 思路 | verified | `Logic/Wave/WaveLogic.cs` | 同时使用计时、出生游标与清场判定 |
+| 投掷逻辑落点与视觉弧高分离 | 数学算法 | verified | `ProjectileTrajectory.cs`、`Foundation/Ballistics.cs` | 视觉高度不能改变真实落点 |
+| 椭圆武器轨道与透视挤压 | 数学算法 | verified | `Presentation/Combat/WeaponAimController.cs` | 层级只看 rawAngle，不看视觉抬升 |
 
 ## 误用红线
 

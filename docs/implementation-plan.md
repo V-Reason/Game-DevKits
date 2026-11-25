@@ -21,8 +21,13 @@
 
 ## 后续候选
 
-- Effect Strategy + Simple Factory Kit。
-- Asset cache / 引用计数 / LRU 生命周期 Kit。
-- Audio priority arbitration Kit。
 - Unity grid-light renderer sample。
 - MVC/MVVM HUD architecture comparison。
+
+## v0.2 已完成
+
+- 工程：Asset Lifecycle、Effect Orchestrator、Audio Arbitration、UI Stack、Config Validation、Diagnostics Snapshot。
+- 玩法：Actor Motion、Steering & Path Following、Wave Sequencer、Ballistics & Aim。
+- 新增 10 个二级深挖页，父模块链接、问题索引和模式账本已同步。
+- Actor Motion 修复了原项目反向转向未按加速度限幅的已知问题。
+- 总计 20 个独立 Kit；新增测试全部先失败、后通过。

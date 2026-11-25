@@ -25,3 +25,7 @@
 ## 源码
 
 `Logic/Services/SaveService.cs`、`Data/Save/GameSaveDTO.cs`、`Tests/Runtime/Editor/存档Tests.cs`。
+
+## 二级拆解
+
+- [指标与诊断](../submodules/diagnostics-snapshot.md)

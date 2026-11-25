@@ -25,3 +25,7 @@ AudioManager 统一接收音频 ID，按播放器池、并发上限、优先级�
 ## 源码
 
 `Presentation/Audio/AudioManager.cs`、`SfxPlayback.cs`、`Assets/Resources/audio/`。
+
+## 二级拆解
+
+- [音频仲裁](../submodules/audio-arbitration.md)

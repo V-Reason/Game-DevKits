@@ -27,3 +27,7 @@
 ## 源码
 
 `Logic/Grid/NavMap.cs`、`NavField.cs`、`NavFieldSet.cs`、`Logic/Actor/EnemyBrain.cs`。
+
+## 二级拆解
+
+- [路径跟随与转向](../submodules/steering-following.md)

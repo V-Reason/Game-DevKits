@@ -7,6 +7,7 @@
 - `UnityRuntimeDriver`：把 Unity 的 `Update` / `FixedUpdate` 转为显式事件。
 - `UnityTimeSource`：统一提供缩放、未缩放、固定和真实时间。
 - `UnityVectorAdapter`：`UnityEngine.Vector2` 与 `System.Numerics.Vector2` 互转。
+- `Samples~/CoreIntegrations/`：Asset、UI、Motion、Path 与 Audio 的接入样例；导入前需先加入对应 Kit。
 
 ## 本地导入
 
@@ -19,6 +20,11 @@
 2. 等待 Unity 编译。
 3. 创建空物体并挂 `UnityRuntimeDriver`。
 4. 订阅 `FrameTick` 和 `PhysicsTick`，不要在业务组件中继续散落 `Update`。
+
+## 核心 Kit 接入
+
+`Samples~` 默认不编译。需要某个适配时，先加入对应 Kit 的 `src/` 源码，再把样片导入 `Assets/`。
+具体依赖见 `Samples~/CoreIntegrations/README.md`。
 
 ## 人工验收
 

@@ -25,3 +25,8 @@
 ## 源码
 
 `Logic/Input/InputBuffer.cs`、`Logic/Movement/ActorLedger.cs`、`Logic/Player/MoveGroup.cs`。
+
+## 二级拆解
+
+- [运动账本与门禁](../submodules/actor-motion.md)
+- [投掷与瞄准](../submodules/ballistics-aim.md)

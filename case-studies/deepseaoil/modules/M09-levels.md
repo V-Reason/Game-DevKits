@@ -21,3 +21,7 @@
 ## 源码
 
 `Logic/Wave/WaveLogic.cs`、`Logic/Level/LevelLogic.cs`、`Tests/Runtime/Editor/WaveLogicTests.cs`。
+
+## 二级拆解
+
+- [波次调度](../submodules/wave-sequencer.md)

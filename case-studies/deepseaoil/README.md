@@ -31,6 +31,19 @@
    - [M14 音频](modules/M14-audio.md)
    - [M15 存档与诊断](modules/M15-save.md)
 
+## v0.2 二级深挖
+
+- [资产与缓存生命周期](submodules/asset-lifecycle.md)
+- [特效编排](submodules/effect-orchestration.md)
+- [音频仲裁](submodules/audio-arbitration.md)
+- [UI 栈与生命周期](submodules/ui-stack.md)
+- [配置校验与 Spec](submodules/config-validation.md)
+- [指标与诊断](submodules/diagnostics-snapshot.md)
+- [运动账本与门禁](submodules/actor-motion.md)
+- [路径跟随与转向](submodules/steering-following.md)
+- [波次调度](submodules/wave-sequencer.md)
+- [投掷与瞄准](submodules/ballistics-aim.md)
+
 ## 证据等级
 
 - `verified`：在固定提交的源码中能定位到对应角色关系或算法。
